@@ -15,11 +15,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     Button history_btn,bibleButton,mathButton,enButton;
-    Singleton sing;
+    public Singleton sing;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,14 +29,14 @@ public class MainActivity extends AppCompatActivity
         bibleButton=(Button) findViewById(R.id.bible);
         mathButton=(Button) findViewById(R.id.math);
         enButton=(Button) findViewById(R.id.english);
-         sing=new Singleton();
+        sing.getInstance();
 
         history_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),TypeActivity.class);
                 //intent.putExtra("subject", "1");
-                sing.setValue("1");
+                sing.getInstance().setValue("1");
                 startActivity(intent);
             }
         });
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),TypeActivity.class);
                 //intent.putExtra("subject", "2");
-                sing.setValue("2");
+                sing.getInstance().setValue("2");
                 startActivity(intent);
             }
         });
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),TypeActivity.class);
                 //intent.putExtra("subject", "3");
-                sing.setValue("3");
+                sing.getInstance().setValue("3");
                 startActivity(intent);
             }
         });
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),TypeActivity.class);
                 //intent.putExtra("subject", "4");
-                sing.setValue("4");
+                sing.getInstance().setValue("4");
                 startActivity(intent);
             }
         });
@@ -78,14 +77,14 @@ public class MainActivity extends AppCompatActivity
             }
         });*/
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+      /*  DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);*/
     }
 
     @Override
@@ -120,7 +119,7 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
+   /* @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -143,5 +142,5 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
+    }*/
 }

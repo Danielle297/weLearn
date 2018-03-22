@@ -43,6 +43,7 @@ public class TestActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         subject=Singleton.getInstance().getValue();
+        Log.d("test","subject"+subject);
         setContentView(R.layout.activity_test);
         questionTextView = findViewById(R.id.question);
         ans1 = findViewById(R.id.ans1);
