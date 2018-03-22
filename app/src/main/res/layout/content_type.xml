@@ -29,7 +29,7 @@
             android:id="@+id/button_test"
             android:layout_width="117dp"
             android:layout_height="118dp"
-            android:layout_alignParentTop="true"
+
             android:layout_centerHorizontal="true"
             android:layout_marginTop="36dp"
             android:src="@drawable/icons_take_test"

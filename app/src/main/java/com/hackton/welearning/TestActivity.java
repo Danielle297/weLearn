@@ -1,10 +1,12 @@
 package com.hackton.welearning;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
@@ -15,6 +17,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -36,13 +39,14 @@ public class TestActivity extends AppCompatActivity {
     CheckBox ans1, ans2, ans3, ans4;
     int correctAnswer;
     String subject, subjectName;
+    ImageView dialog_imageview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        dialog_imageview = (ImageView)findViewById(R.id.dialog_imageview);
         subject=Singleton.getInstance().getValue();
         subjectName = Singleton.getInstance().getName();
         Log.d("test","subject"+subject);
@@ -128,14 +132,21 @@ public class TestActivity extends AppCompatActivity {
         Log.i("Danielle", "correctAnswer is: " + correctAnswer + " " + ans1.isChecked());
         if (correctAnswer==0 && ans1.isChecked() == true || correctAnswer==1 && ans2.isChecked() == true ||
                 correctAnswer==2 && ans3.isChecked() == true || correctAnswer==3 && ans4.isChecked() == true){
-//            Log.i("Danielle", "correctAnswer is: " + correctAnswer);
-//        }
+
+
+
+
             AlertDialog.Builder builder;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
+                builder = new AlertDialog.Builder(this);
             } else {
                 builder = new AlertDialog.Builder(this);
             }
+
+            LayoutInflater factory = LayoutInflater.from(this);
+            final View view_alert = factory.inflate(R.layout.dialog_image, null);
+            builder.setView(view_alert);
+
             builder.setTitle("תשובה נכונה!")
                     .setMessage("כל הכבוד :)")
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -152,13 +163,13 @@ public class TestActivity extends AppCompatActivity {
                             // do nothing
                         }
                     })
-                    .setIcon(android.R.drawable.ic_dialog_alert)
+                   // .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
         }
         else {
             AlertDialog.Builder builder;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
+                builder = new AlertDialog.Builder(this);
             } else {
                 builder = new AlertDialog.Builder(this);
             }
@@ -176,6 +187,7 @@ public class TestActivity extends AppCompatActivity {
                     })
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
+
         }
     }
 
@@ -213,6 +225,16 @@ public class TestActivity extends AppCompatActivity {
             default:
                 break;
         }
+    }
+
+
+    public void timerDelayRemoveView(int time, final ImageView v) {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                v.setVisibility(View.GONE);
+            }
+        }, time);
     }
 
 }
