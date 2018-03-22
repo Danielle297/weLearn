@@ -32,9 +32,10 @@ import org.json.JSONObject;
 public class TestActivity extends AppCompatActivity {
 
     TextView questionTextView;
+    TextView subjectTV;
     CheckBox ans1, ans2, ans3, ans4;
     int correctAnswer;
-    String subject;
+    String subject, subjectName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +44,12 @@ public class TestActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         subject=Singleton.getInstance().getValue();
+        subjectName = Singleton.getInstance().getName();
         Log.d("test","subject"+subject);
         setContentView(R.layout.activity_test);
-        questionTextView = findViewById(R.id.question);
+        subjectTV = findViewById(R.id.which_subject);
+        subjectTV.setText(subjectName);
+        questionTextView = findViewById(R.id.which_question);
         ans1 = findViewById(R.id.ans1);
         ans2 = findViewById(R.id.ans2);
         ans3 = findViewById(R.id.ans3);
@@ -136,7 +140,11 @@ public class TestActivity extends AppCompatActivity {
                     .setMessage("כל הכבוד :)")
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            // continue with delete
+                            getQuestionsFromServer(subject);
+                            ans1.setChecked(false);
+                            ans2.setChecked(false);
+                            ans3.setChecked(false);
+                            ans4.setChecked(false);
                         }
                     })
                     .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {

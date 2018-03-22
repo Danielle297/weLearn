@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),TypeActivity.class);
                 //intent.putExtra("subject", "1");
                 sing.getInstance().setValue("1");
+                sing.getInstance().setName(getApplicationContext().getResources().getString(R.string.History));
                 startActivity(intent);
             }
         });
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),TypeActivity.class);
                 //intent.putExtra("subject", "2");
                 sing.getInstance().setValue("2");
+                sing.getInstance().setName(getApplicationContext().getResources().getString(R.string.bible));
                 startActivity(intent);
             }
         });
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),TypeActivity.class);
                 //intent.putExtra("subject", "3");
                 sing.getInstance().setValue("3");
+                sing.getInstance().setName(getApplicationContext().getResources().getString(R.string.math));
                 startActivity(intent);
             }
         });
@@ -64,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),TypeActivity.class);
                 //intent.putExtra("subject", "4");
                 sing.getInstance().setValue("4");
+                sing.getInstance().setName(getApplicationContext().getResources().getString(R.string.english));
                 startActivity(intent);
             }
         });

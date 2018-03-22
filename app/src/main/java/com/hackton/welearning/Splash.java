@@ -20,8 +20,9 @@ public class Splash extends Activity {
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         setContentView(R.layout.splash_layout);
         ImageView owl = findViewById(R.id.splashscreen);
-        //ImageView owl_wink = findViewById(R.id.splashscreen1);
+        ImageView owl1 = findViewById(R.id.splashscreen1);
         timerDelayRemoveView(1000, owl);
+        timerDelayRemoveView(2000, owl1);
 
         new Handler().postDelayed(new Runnable(){
             @Override
