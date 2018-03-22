@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">WeLearn</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">הגדרות</string>
+    <string name="title_activity_uploadquestion">העלה שאלה</string>
+    <string name="action_question">שאלה</string>
+    <string name="action_answer1">תשובה נכונה</string>
+    <string name="action_answer2">תשובה 2</string>
+    <string name="action_answer3">תשובה 3</string>
+    <string name="action_answer4">תשובה 4</string>
+    <string name="question">שאלה</string>
+    <string name="submit_question">שלח שאלה</string>
+    <string name="History">היסטוריה</string>
+    <string name="bible">תנך</string>
+    <string name="math">מתמטיקה</string>
+    <string name="english">אנגלית</string>
+    <string name="title_activity_type">מה תרצה לעשות?</string>
+    <string name="test">בחינה</string>
+    <string name="upload">העלה</string>
+    <string name="title_activity_test">בחינה</string>
+</resources>
