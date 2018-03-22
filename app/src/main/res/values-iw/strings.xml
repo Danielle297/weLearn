@@ -8,11 +8,11 @@
     <string name="title_activity_uploadquestion">העלה שאלה</string>
     <string name="action_question">שאלה</string>
     <string name="action_answer1">תשובה נכונה</string>
-    <string name="action_answer2">תשובה 2</string>
-    <string name="action_answer3">תשובה 3</string>
-    <string name="action_answer4">תשובה 4</string>
+    <string name="action_answer2">מסיח 1</string>
+    <string name="action_answer3">מסיח 2</string>
+    <string name="action_answer4">מסיח 3</string>
     <string name="question">שאלה</string>
-    <string name="submit_question">שלח שאלה</string>
+    <string name="submit_question">שלח את האתגר</string>
     <string name="History">היסטוריה</string>
     <string name="bible">תנך</string>
     <string name="math">מתמטיקה</string>

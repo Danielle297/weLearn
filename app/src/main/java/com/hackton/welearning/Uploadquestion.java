@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -40,12 +41,25 @@ public class Uploadquestion extends AppCompatActivity {
     Button submit_button;
     JSONObject json;
     JSONObject json_answer;
-
+    String subject, subjectName;
+    TextView subjectTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+        subject=Singleton.getInstance().getValue();
+        subjectName = Singleton.getInstance().getName();
+        Log.d("test","subject"+subject);
         setContentView(R.layout.activity_uploadquestion);
+        subjectTV = findViewById(R.id.upload_title_subject);
+        subjectTV.setText(subjectName);
+
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         question = (EditText) findViewById(R.id.question);
         correct = (EditText) findViewById(R.id.correctanswer);
