@@ -4,24 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.hackton.welearning.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-<LinearLayout
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+  <!--  <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.0"
 
-        android:orientation="horizontal" >
+        android:orientation="horizontal" >-->
 
-        <Button
+    <ImageButton
+        android:id="@+id/history"
+        android:layout_width="155dp"
+        android:layout_height="130dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/bible"
+        android:layout_marginStart="16dp"
+        android:text="@string/History"
+        android:background="#E0562F" />
+
+    <ImageButton
+        android:id="@+id/bible"
+        android:layout_width="155dp"
+        android:layout_height="130dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/bible"
+        android:background="#2B9FA5" />
+
+    <ImageButton
+        android:id="@+id/math"
+        android:layout_width="155dp"
+        android:layout_height="130dp"
+        android:layout_alignEnd="@+id/history"
+        android:layout_centerVertical="true"
+        android:text="@string/math"
+        android:background="#302f2e" />
+
+    <ImageButton
+        android:id="@+id/english"
+        android:layout_width="155dp"
+        android:layout_height="130dp"
+        android:layout_alignStart="@+id/bible"
+        android:layout_alignTop="@+id/math"
+        android:text="@string/english"
+        android:background="#ff9900" />
+    <!-- </LinearLayout>-->
+
+        <!--<Button
             android:id="@+id/history"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -61,9 +100,9 @@
             android:layout_weight="1.0"
             android:text="@string/english" />
 
-    </LinearLayout>
+    </LinearLayout>-->
 
-</LinearLayout>
+</RelativeLayout>
 
     <!--<LinearLayout
     android:layout_width="match_parent"

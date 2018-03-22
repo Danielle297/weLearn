@@ -14,10 +14,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button history_btn,bibleButton,mathButton,enButton;
+    ImageButton history_btn,bibleButton,mathButton,enButton;
     public Singleton sing;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        history_btn=(Button) findViewById(R.id.history);
-        bibleButton=(Button) findViewById(R.id.bible);
-        mathButton=(Button) findViewById(R.id.math);
-        enButton=(Button) findViewById(R.id.english);
+        history_btn=(ImageButton) findViewById(R.id.history);
+        bibleButton=(ImageButton) findViewById(R.id.bible);
+        mathButton=(ImageButton) findViewById(R.id.math);
+        enButton=(ImageButton) findViewById(R.id.english);
         sing.getInstance();
 
         history_btn.setOnClickListener(new View.OnClickListener() {
