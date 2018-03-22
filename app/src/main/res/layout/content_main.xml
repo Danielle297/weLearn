@@ -28,6 +28,7 @@
         android:layout_alignTop="@+id/bible"
         android:layout_marginStart="16dp"
         android:text="@string/History"
+        android:src="@drawable/icons_history"
         android:background="#E0562F" />
 
     <ImageButton
@@ -39,6 +40,7 @@
         android:layout_marginEnd="11dp"
         android:layout_marginTop="32dp"
         android:text="@string/bible"
+        android:src="@drawable/icons_bible"
         android:background="#2B9FA5" />
 
     <ImageButton
@@ -48,6 +50,7 @@
         android:layout_alignEnd="@+id/history"
         android:layout_centerVertical="true"
         android:text="@string/math"
+        android:src="@drawable/icons_math"
         android:background="#302f2e" />
 
     <ImageButton
@@ -57,6 +60,7 @@
         android:layout_alignStart="@+id/bible"
         android:layout_alignTop="@+id/math"
         android:text="@string/english"
+        android:src="@drawable/icons_eng"
         android:background="#ff9900" />
     <!-- </LinearLayout>-->
 
