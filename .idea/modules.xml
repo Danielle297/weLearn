@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\kbf384\Desktop\git_welearn\welearn\app\app.iml" filepath="C:\Users\kbf384\Desktop\git_welearn\welearn\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/welearn.iml" filepath="$PROJECT_DIR$/welearn.iml" />
-      <module fileurl="file://C:\Users\kbf384\Desktop\git_welearn\welearn\welearn.iml" filepath="C:\Users\kbf384\Desktop\git_welearn\welearn\welearn.iml" />
     </modules>
   </component>
 </project>
