@@ -9,10 +9,12 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class TypeActivity extends AppCompatActivity {
 
-    Button testButton,uploadButton;
+    ImageButton testButton,uploadButton;
     String subject;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +28,8 @@ public class TypeActivity extends AppCompatActivity {
         Log.d("typeActivity",""+subject);
 
 
-        testButton=(Button) findViewById(R.id.button_test);
-        uploadButton=(Button) findViewById(R.id.button_upload);
+        testButton=(ImageButton) findViewById(R.id.button_test);
+        uploadButton=(ImageButton) findViewById(R.id.button_upload);
         testButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

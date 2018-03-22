@@ -8,26 +8,33 @@
     tools:context="com.hackton.welearning.TypeActivity"
     tools:showIn="@layout/activity_type">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
 
-    <Button
-        android:id="@+id/button_upload"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/upload"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="161dp" />
+        <ImageButton
+            android:id="@+id/button_upload"
+            android:layout_width="117dp"
+            android:layout_height="118dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/button_test"
+            android:layout_marginBottom="168dp"
+            android:src="@drawable/icons_upload_question"
+            android:text="@string/upload"
+            android:background="#E0562F"/>
 
-    <Button
-        android:id="@+id/button_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/test"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="242dp" />
+        <ImageButton
+            android:id="@+id/button_test"
+            android:layout_width="117dp"
+            android:layout_height="118dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/icons_take_test"
+            android:text="@string/test"
+            android:background="#2B9FA5"/>
 
-</LinearLayout>
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
